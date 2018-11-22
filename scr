@@ -1,0 +1,17 @@
+#!/bin/bash
+
+#data nuzhnogo formata
+data=$(date +"%b %d")
+#echo $data
+
+while read line 
+	do 
+	 echo "$line" | grep -o "${data}.*Failed.password.*$";
+	done < /var/log/auth.log
+ 
+
+
+
+
+
+
